@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:12:58 2024
+
+
+ Performance counter stats for process id '63133':
+
+ 5,15,14,69,42,024      cycles                                                                  (41.68%)
+ 5,01,33,75,46,304      instructions                     #    0.97  insn per cycle              (41.68%)
+   36,43,11,48,695      cache-references                                                        (41.67%)
+   12,76,77,80,024      cache-misses                     #   35.05% of all cache refs           (41.67%)
+
+      49.583020831 seconds time elapsed
+

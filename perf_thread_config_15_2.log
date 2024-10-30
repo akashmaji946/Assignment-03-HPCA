@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:13:49 2024
+
+
+ Performance counter stats for process id '63251':
+
+ 4,07,16,92,67,255      cycles                                                                  (41.66%)
+ 5,01,77,75,74,146      instructions                     #    1.23  insn per cycle              (41.67%)
+   32,64,47,55,724      cache-references                                                        (41.65%)
+      69,74,65,337      cache-misses                     #    2.14% of all cache refs           (41.66%)
+
+      40.302983072 seconds time elapsed
+

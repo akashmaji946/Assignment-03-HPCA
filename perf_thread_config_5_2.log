@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:05:41 2024
+
+
+ Performance counter stats for process id '61945':
+
+ 5,18,61,70,51,662      cycles                                                                  (41.67%)
+ 5,01,73,83,63,199      instructions                     #    0.97  insn per cycle              (41.67%)
+   35,69,77,23,061      cache-references                                                        (41.67%)
+   12,58,24,24,651      cache-misses                     #   35.25% of all cache refs           (41.67%)
+
+      49.569254207 seconds time elapsed
+

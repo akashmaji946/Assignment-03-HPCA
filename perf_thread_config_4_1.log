@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:04:51 2024
+
+
+ Performance counter stats for process id '61836':
+
+ 5,20,03,58,18,832      cycles                                                                  (41.68%)
+ 5,01,62,27,47,346      instructions                     #    0.96  insn per cycle              (41.67%)
+   36,09,47,64,140      cache-references                                                        (41.67%)
+   12,77,64,05,825      cache-misses                     #   35.40% of all cache refs           (41.67%)
+
+      49.624869468 seconds time elapsed
+

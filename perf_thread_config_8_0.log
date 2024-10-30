@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:08:02 2024
+
+
+ Performance counter stats for process id '62367':
+
+ 3,95,27,55,72,851      cycles                                                                  (41.67%)
+ 5,01,36,91,75,400      instructions                     #    1.27  insn per cycle              (41.67%)
+   25,30,16,53,820      cache-references                                                        (41.67%)
+      68,12,96,128      cache-misses                     #    2.69% of all cache refs           (41.67%)
+
+      37.239718583 seconds time elapsed
+

@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:20:04 2024
+
+
+ Performance counter stats for process id '64140':
+
+ 4,02,61,92,26,057      cycles                                                                  (41.67%)
+ 5,01,41,86,50,324      instructions                     #    1.25  insn per cycle              (41.67%)
+   32,68,62,15,527      cache-references                                                        (41.67%)
+      68,37,91,639      cache-misses                     #    2.09% of all cache refs           (41.67%)
+
+      37.467921383 seconds time elapsed
+

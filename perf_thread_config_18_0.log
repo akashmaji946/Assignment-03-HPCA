@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:16:01 2024
+
+
+ Performance counter stats for process id '63535':
+
+ 4,91,35,88,24,561      cycles                                                                  (41.67%)
+ 5,01,33,95,15,197      instructions                     #    1.02  insn per cycle              (41.67%)
+   34,27,07,78,140      cache-references                                                        (41.67%)
+   11,49,96,45,802      cache-misses                     #   33.56% of all cache refs           (41.67%)
+
+      47.609161406 seconds time elapsed
+

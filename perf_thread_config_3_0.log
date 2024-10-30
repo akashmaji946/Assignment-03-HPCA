@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:04:03 2024
+
+
+ Performance counter stats for process id '61751':
+
+ 4,91,02,06,05,460      cycles                                                                  (41.67%)
+ 5,01,41,11,40,876      instructions                     #    1.02  insn per cycle              (41.66%)
+   33,10,22,51,620      cache-references                                                        (41.66%)
+   11,13,30,60,417      cache-misses                     #   33.63% of all cache refs           (41.67%)
+
+      46.980170506 seconds time elapsed
+

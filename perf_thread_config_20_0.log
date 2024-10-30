@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:17:42 2024
+
+
+ Performance counter stats for process id '63841':
+
+ 5,17,27,86,25,657      cycles                                                                  (41.67%)
+ 5,01,47,88,46,212      instructions                     #    0.97  insn per cycle              (41.66%)
+   36,00,24,96,200      cache-references                                                        (41.66%)
+   12,81,79,06,069      cache-misses                     #   35.60% of all cache refs           (41.66%)
+
+      49.709457370 seconds time elapsed
+
