@@ -1,12 +1,12 @@
-# started on Wed Oct 30 11:18:32 2024
+# started on Fri Nov  1 13:37:29 2024
 
 
- Performance counter stats for process id '63931':
+ Performance counter stats for process id '90616':
 
- 4,03,82,27,18,301      cycles                                                                  (41.66%)
- 5,01,27,87,06,134      instructions                     #    1.24  insn per cycle              (41.66%)
-   32,69,74,89,621      cache-references                                                        (41.66%)
-      69,47,08,353      cache-misses                     #    2.12% of all cache refs           (41.67%)
+ 3,95,57,57,62,828      cycles                                                                  (41.66%)
+ 5,01,36,54,67,704      instructions                     #    1.27  insn per cycle              (41.67%)
+   32,74,36,69,523      cache-references                                                        (41.67%)
+      68,96,97,721      cache-misses                     #    2.11% of all cache refs           (41.68%)
 
-      38.643475605 seconds time elapsed
+      37.888635080 seconds time elapsed
 
