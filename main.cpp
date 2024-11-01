@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "work.h"
 
+/*
+"""
+Author: Akash Maji
+Email: akashmaji@iisc.ac.in
+"""
+*/
+
 /* neccessary headers */
 #include <sstream>
 #include <fstream>
@@ -27,8 +34,8 @@ std::vector<int> order;
 /* final cpu assignments after analysis */
 std::vector<int> thread_affinities = {-1, -1, -1};
 
-
 std::vector<pid_t> perf_pids = {0, 0, 0};
+
 // implement the functions here.
 
 /* set the thread `handle` with index `threadIdx` to run on CPU `cpu` */
@@ -56,14 +63,11 @@ void start_monitoring_for_thread(uint32_t threadIdx, pid_t tid, pthread_t handle
     /* Construct the perf command to measure parameters */
     std::stringstream ss;
     ss << "perf stat -e cycles,instructions,cache-references,cache-misses -p "
-   << tid << " --output perf_thread_config_" << choice << "_" << threadIdx << ".log& echo $!>>perf_pids.txt";
+       << tid << " --output perf_thread_config_" << choice << "_" << threadIdx << ".log& echo $!>>perf_pids.txt";
 
     
     /* Run the command using system() */
     std::string command = ss.str();
-    // cout << "Starting perf monitoring for thread " << threadIdx << ":\n\t\t" << command << std::endl;
-    // cout << "called start\n";
-    // cout << "thread:" << threadIdx << "=>" << tid << endl;
     system(command.c_str());
     perf_pids[threadIdx] = tid;
 
@@ -73,14 +77,12 @@ void stop_monitoring_for_thread(uint32_t threadIdx) {
     /* not implemneted, as was optional */
 }
 
+/* return optimal CPU affinity for thread `threadIdx` */
 int32_t get_thread_affinity(uint32_t threadIdx) {
-  // cout << "Called get_thread_affinity(): thread=>" 
-  //      << threadIdx << ", affinity=>" << thread_affinities[threadIdx];
-  // cout << "Called GET():" << thread_affinities[threadIdx] << "\n";
   return thread_affinities[threadIdx];
 }
 
-/* post analysis, the best assignment is saved in a file, so read it in */
+/* Post analysis, the best assignment is saved in a file, so read it in */
 void get_thread_affinities_from_file(string filename){
     std::ifstream file(filename);
     if (!file.is_open()) {
