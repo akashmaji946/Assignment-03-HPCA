@@ -1,12 +1,12 @@
-# started on Fri Nov  1 12:17:31 2024
+# started on Fri Nov  1 13:37:29 2024
 
 
- Performance counter stats for process id '81176':
+ Performance counter stats for process id '90616':
 
- 5,06,18,39,78,535      cycles                                                                  (41.68%)
- 5,01,63,64,52,618      instructions                     #    0.99  insn per cycle              (41.68%)
-   36,11,21,27,509      cache-references                                                        (41.68%)
-   12,50,04,22,853      cache-misses                     #   34.62% of all cache refs           (41.67%)
+ 3,95,57,57,62,828      cycles                                                                  (41.66%)
+ 5,01,36,54,67,704      instructions                     #    1.27  insn per cycle              (41.67%)
+   32,74,36,69,523      cache-references                                                        (41.67%)
+      68,96,97,721      cache-misses                     #    2.11% of all cache refs           (41.68%)
 
-      49.789220282 seconds time elapsed
+      37.888635080 seconds time elapsed
 

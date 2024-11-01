@@ -1,12 +1,12 @@
-# started on Fri Nov  1 12:13:34 2024
+# started on Fri Nov  1 13:33:28 2024
 
 
- Performance counter stats for process id '80753':
+ Performance counter stats for process id '90090':
 
- 4,00,50,18,04,562      cycles                                                                  (41.67%)
- 5,01,32,95,76,087      instructions                     #    1.25  insn per cycle              (41.67%)
-   27,17,62,82,551      cache-references                                                        (41.67%)
-      70,78,64,042      cache-misses                     #    2.60% of all cache refs           (41.66%)
+ 5,39,80,23,80,421      cycles                                                                  (41.67%)
+ 5,01,66,34,38,737      instructions                     #    0.93  insn per cycle              (41.66%)
+   42,58,83,69,001      cache-references                                                        (41.66%)
+   14,75,01,60,678      cache-misses                     #   34.63% of all cache refs           (41.67%)
 
-      38.125839425 seconds time elapsed
+      51.578353171 seconds time elapsed
 

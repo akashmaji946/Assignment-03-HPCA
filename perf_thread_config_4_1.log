@@ -1,12 +1,12 @@
-# started on Fri Nov  1 12:03:46 2024
+# started on Fri Nov  1 13:23:44 2024
 
 
- Performance counter stats for process id '80040':
+ Performance counter stats for process id '88822':
 
- 4,99,59,16,42,444      cycles                                                                  (41.66%)
- 5,01,65,53,98,515      instructions                     #    1.00  insn per cycle              (41.65%)
-   33,99,44,28,295      cache-references                                                        (41.67%)
-   11,53,60,66,802      cache-misses                     #   33.94% of all cache refs           (41.67%)
+ 5,01,81,16,62,897      cycles                                                                  (41.66%)
+ 5,02,56,63,94,111      instructions                     #    1.00  insn per cycle              (41.67%)
+   35,43,48,53,041      cache-references                                                        (41.67%)
+   12,17,26,74,864      cache-misses                     #   34.35% of all cache refs           (41.67%)
 
-      50.171144164 seconds time elapsed
+      49.269320779 seconds time elapsed
 
