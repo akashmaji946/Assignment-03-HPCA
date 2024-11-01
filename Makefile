@@ -8,4 +8,5 @@ run: main
 	./main ${SEED}
 
 clean: Makefile
-	-@rm main
+	rm -rf main
+	rm -rf *.txt *.log
