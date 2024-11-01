@@ -1,12 +1,12 @@
-# started on Wed Oct 30 11:46:30 2024
+# started on Fri Nov  1 12:08:35 2024
 
 
- Performance counter stats for process id '70125':
+ Performance counter stats for process id '80417':
 
- 5,47,45,85,71,546      cycles                                                                  (41.67%)
- 5,01,59,47,65,613      instructions                     #    0.92  insn per cycle              (41.67%)
-   41,23,10,68,931      cache-references                                                        (41.67%)
-   14,65,59,26,764      cache-misses                     #   35.55% of all cache refs           (41.66%)
+ 5,46,63,49,98,483      cycles                                                                  (41.67%)
+ 5,01,29,68,53,539      instructions                     #    0.92  insn per cycle              (41.67%)
+   42,63,63,58,620      cache-references                                                        (41.67%)
+   14,57,52,04,160      cache-misses                     #   34.18% of all cache refs           (41.67%)
 
-      51.093745490 seconds time elapsed
+      52.077501818 seconds time elapsed
 

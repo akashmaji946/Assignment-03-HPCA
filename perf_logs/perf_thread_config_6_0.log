@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:43:27 2024
+
+
+ Performance counter stats for process id '69611':
+
+ 3,95,00,27,71,485      cycles                                                                  (41.66%)
+ 5,01,40,00,43,889      instructions                     #    1.27  insn per cycle              (41.67%)
+   25,04,85,48,735      cache-references                                                        (41.67%)
+      68,65,44,931      cache-misses                     #    2.74% of all cache refs           (41.67%)
+
+      37.679559265 seconds time elapsed
+

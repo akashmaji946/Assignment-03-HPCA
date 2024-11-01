@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:50:46 2024
+
+
+ Performance counter stats for process id '71177':
+
+ 4,03,51,52,86,543      cycles                                                                  (41.67%)
+ 5,01,38,27,30,166      instructions                     #    1.24  insn per cycle              (41.66%)
+   32,68,67,77,481      cache-references                                                        (41.66%)
+      69,00,63,100      cache-misses                     #    2.11% of all cache refs           (41.66%)
+
+      38.734337570 seconds time elapsed
+

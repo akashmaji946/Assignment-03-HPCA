@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:51:25 2024
+
+
+ Performance counter stats for process id '71350':
+
+ 5,47,58,06,54,683      cycles                                                                  (41.67%)
+ 5,01,75,34,27,211      instructions                     #    0.92  insn per cycle              (41.67%)
+   41,50,99,47,613      cache-references                                                        (41.67%)
+   14,54,72,77,220      cache-misses                     #   35.05% of all cache refs           (41.66%)
+
+      50.912018346 seconds time elapsed
+

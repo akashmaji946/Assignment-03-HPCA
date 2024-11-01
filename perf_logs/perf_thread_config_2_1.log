@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:40:20 2024
+
+
+ Performance counter stats for process id '68877':
+
+ 3,99,00,62,50,335      cycles                                                                  (41.68%)
+ 5,01,43,76,23,106      instructions                     #    1.26  insn per cycle              (41.68%)
+   25,13,64,45,633      cache-references                                                        (41.68%)
+      68,57,10,775      cache-misses                     #    2.73% of all cache refs           (41.66%)
+
+      36.966935729 seconds time elapsed
+

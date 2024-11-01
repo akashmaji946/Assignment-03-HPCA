@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:39:31 2024
+
+
+ Performance counter stats for process id '68528':
+
+ 4,99,35,44,70,075      cycles                                                                  (41.67%)
+ 5,02,07,31,81,451      instructions                     #    1.01  insn per cycle              (41.67%)
+   33,44,23,00,544      cache-references                                                        (41.68%)
+   10,92,29,16,735      cache-misses                     #   32.66% of all cache refs           (41.68%)
+
+      48.063160411 seconds time elapsed
+

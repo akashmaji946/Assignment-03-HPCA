@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:53:44 2024
+
+
+ Performance counter stats for process id '71969':
+
+ 5,50,38,74,87,264      cycles                                                                  (41.67%)
+ 5,01,62,61,50,836      instructions                     #    0.91  insn per cycle              (41.67%)
+   41,83,62,76,380      cache-references                                                        (41.68%)
+   14,63,11,31,926      cache-misses                     #   34.97% of all cache refs           (41.67%)
+
+      51.553591391 seconds time elapsed
+

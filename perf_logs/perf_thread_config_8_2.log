@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:44:59 2024
+
+
+ Performance counter stats for process id '69804':
+
+ 3,96,14,17,83,081      cycles                                                                  (41.67%)
+ 5,01,56,49,34,359      instructions                     #    1.27  insn per cycle              (41.66%)
+   25,13,26,02,833      cache-references                                                        (41.67%)
+      68,33,93,886      cache-misses                     #    2.72% of all cache refs           (41.67%)
+
+      37.798313182 seconds time elapsed
+

@@ -1,0 +1,12 @@
+# started on Wed Oct 30 11:47:22 2024
+
+
+ Performance counter stats for process id '70330':
+
+ 5,47,55,32,70,150      cycles                                                                  (41.67%)
+ 5,01,46,38,81,539      instructions                     #    0.92  insn per cycle              (41.66%)
+   41,06,24,86,632      cache-references                                                        (41.66%)
+   14,69,23,48,617      cache-misses                     #   35.78% of all cache refs           (41.66%)
+
+      51.147930854 seconds time elapsed
+
