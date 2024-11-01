@@ -45,31 +45,31 @@ def find_best_cpu_configuration():
 
     for perf_file in perf_files:
         config, config_metrics = parse_perf_output_log(perf_file)
-        print(config, config_metrics)
+        # print(config, config_metrics)
         if "cache-misses" in config_metrics:
             if config not in cache_misses_in_config:
                 cache_misses_in_config[config] = config_metrics['cache-misses']
             else:
                 cache_misses_in_config[config] += config_metrics['cache-misses']
 
-    print("Choice:    Config:  Cache Misses")
+    # print("Choice:    Config:  Cache Misses")
     for config in sorted(cache_misses_in_config):
         # Assuming lower cache misses are better
-        print("{:6d}: {}: {}".format(config, thread_to_cpu_permutations[config], cache_misses_in_config[config]))
+        # print("{:6d}: {}: {}".format(config, thread_to_cpu_permutations[config], cache_misses_in_config[config]))
         if cache_misses_in_config[config] < best_metric:
             best_metric = cache_misses_in_config[config]
             best_config = config
 
-    print(f"Best CPU configuration based on cache misses: config {best_config}, with {best_metric} cache misses")
+    print(f"Best CPU configuration based on cache misses: config {best_config}:{thread_to_cpu_permutations[best_config]}, with {best_metric} cache misses")
     return best_config
 
 if __name__ == "__main__":
     # time.sleep(10)
-    print("Reading...")
+    # print("Reading...")
     best_config = find_best_cpu_configuration()
-    print(" Choice =>", best_config)
+    # print(" Choice =>", best_config)
     affinities = thread_to_cpu_permutations[best_config]
-    print(" Config =>", affinities)
+    # print(" Config =>", affinities)
     threadIdx = 1
     with open("cpu_affinities_of_threads.txt", 'w') as f:
         for affinity in affinities:

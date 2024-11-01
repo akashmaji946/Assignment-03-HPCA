@@ -1,12 +1,12 @@
-# started on Wed Oct 30 11:09:33 2024
+# started on Wed Oct 30 11:46:30 2024
 
 
- Performance counter stats for process id '62524':
+ Performance counter stats for process id '70125':
 
- 5,49,40,58,65,249      cycles                                                                  (41.67%)
- 5,01,48,37,52,970      instructions                     #    0.91  insn per cycle              (41.67%)
-   41,11,88,77,060      cache-references                                                        (41.66%)
-   14,63,96,53,872      cache-misses                     #   35.60% of all cache refs           (41.66%)
+ 5,47,45,85,71,546      cycles                                                                  (41.67%)
+ 5,01,59,47,65,613      instructions                     #    0.92  insn per cycle              (41.67%)
+   41,23,10,68,931      cache-references                                                        (41.67%)
+   14,65,59,26,764      cache-misses                     #   35.55% of all cache refs           (41.66%)
 
-      50.923565266 seconds time elapsed
+      51.093745490 seconds time elapsed
 
