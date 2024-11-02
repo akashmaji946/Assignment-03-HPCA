@@ -1,0 +1,12 @@
+# started on Sat Nov  2 15:24:39 2024
+
+
+ Performance counter stats for process id '175284':
+
+ 4,02,35,43,56,850      cycles                                                                  (41.66%)
+ 5,01,47,75,97,193      instructions                     #    1.25  insn per cycle              (41.68%)
+   32,72,31,45,691      cache-references                                                        (41.69%)
+      70,82,63,356      cache-misses                     #    2.16% of all cache refs           (41.69%)
+
+      39.472290125 seconds time elapsed
+

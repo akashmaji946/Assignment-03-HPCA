@@ -5,6 +5,10 @@ Email: akashmaji@iisc.ac.in
 
 import glob
 import time
+
+"""
+mapping of config id to cpu config
+"""
 thread_to_cpu_permutations = [
     [0, 1, 2], [0, 2, 1], [0, 1, 3], [0, 3, 1], [0, 2, 3], [0, 3, 2],
     [1, 0, 2], [1, 2, 0], [1, 0, 3], [1, 3, 0], [1, 2, 3], [1, 3, 2],
@@ -32,6 +36,8 @@ def parse_perf_output_log(file_path):
                 metrics['cache-misses'] = int(line.split()[0].replace(',', ''))
             elif 'seconds' in line:
                 metrics['seconds'] = float(line.split()[0].replace(',', ''))
+    metrics['ipc'] = metrics['instructions']/metrics['cycles']
+    metrics['mpr'] = metrics['cache-misses']/metrics['cache-references']
     return config, metrics
 
 def find_best_cpu_configuration():
@@ -65,10 +71,52 @@ def find_best_cpu_configuration():
     print(f"Best CPU configuration based on cache misses: config {best_config}:{thread_to_cpu_permutations[best_config]}, with {best_metric} cache misses")
     return best_config
 
+def find_best_cpu_configuration_ipc_mpr(param):
+    """
+    reads in all perf log files starting as `perf_thread_config_*` and
+    obatins the file and config which corresponds to optimal parameter
+    returns best_config as an 'int' (index into)
+    """
+    perf_files = glob.glob('perf_thread_config_*.log')
+    best_config = None
+    best_metric = None
+    if param == "ipc":
+        best_metric = -float('inf')
+    else:
+        best_metric = float('inf')
+    param_in_config = {}
+
+
+    for perf_file in perf_files:
+        config, config_metrics = parse_perf_output_log(perf_file)
+        # print(config, config_metrics)
+        if param in config_metrics:
+            if config not in param_in_config:
+                param_in_config[config] = config_metrics[param]
+            else:
+                if param == "ipc":
+                    param_in_config[config] = max(param_in_config[config], config_metrics[param])
+                else:
+                    param_in_config[config] = min(param_in_config[config], config_metrics[param])
+
+
+    print("Choice:    Config:  {}".format(param))
+    for config in sorted(param_in_config):
+        print("{:6d}: {}: {}".format(config, thread_to_cpu_permutations[config], param_in_config[config]))
+        if param == "ipc" and param_in_config[config] > best_metric:
+            best_metric = param_in_config[config]
+            best_config = config
+        elif param == "mpr" and param_in_config[config] < best_metric:
+            best_metric = param_in_config[config]
+            best_config = config
+
+    print(f"Best CPU configuration based on {param}: config {best_config}:{thread_to_cpu_permutations[best_config]}, with {best_metric} {param}")
+    return best_config
+
 def find_best_cpu_time():
     """
     reads in all perf log files starting as `perf_thread_config_*` and
-    obatins the file and config which corresponds to min. cache misses
+    obatins the file and config which corresponds to least time,
     returns best_config as an 'int' (index into)
     """
     perf_files = glob.glob('perf_thread_config_*.log')
@@ -85,9 +133,8 @@ def find_best_cpu_time():
             else:
                 time_taken_in_config[config] += config_metrics['seconds']
 
-    print("Choice:    Config:  Seconds")
+    # print("Choice:    Config:  Seconds")
     for config in sorted(time_taken_in_config):
-        # Assuming lower cache misses are better
         # print("{:6d}: {}: {}".format(config, thread_to_cpu_permutations[config], time_taken_in_config[config]/3))
         if time_taken_in_config[config]/3 < best_metric:
             best_metric = time_taken_in_config[config]/3
@@ -100,13 +147,8 @@ if __name__ == "__main__":
     # time.sleep(10)
     # print("Reading...")
 
-    best_time = find_best_cpu_time()
-    # print(best_time)
-
-    best_config = find_best_cpu_configuration()
-    # print(" Choice =>", best_config)
-    affinities = thread_to_cpu_permutations[best_config]
-    # print(" Config =>", affinities)
+    best_config_on_ipc = find_best_cpu_configuration_ipc_mpr("ipc")
+    affinities = thread_to_cpu_permutations[best_config_on_ipc]
     
     threadIdx = 1
     with open("cpu_affinities_of_threads.txt", 'w') as f:
