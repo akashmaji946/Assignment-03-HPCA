@@ -1,0 +1,12 @@
+# started on Sat Nov  2 15:46:11 2024
+
+
+ Performance counter stats for process id '180338':
+
+ 4,11,58,55,78,548      cycles                                                                  (41.66%)
+ 5,02,15,21,97,917      instructions                     #    1.22  insn per cycle              (41.68%)
+   32,73,88,81,808      cache-references                                                        (41.68%)
+      71,19,60,466      cache-misses                     #    2.17% of all cache refs           (41.69%)
+
+      42.629809314 seconds time elapsed
+

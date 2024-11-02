@@ -60,7 +60,7 @@ def find_best_cpu_configuration():
             else:
                 cache_misses_in_config[config] += config_metrics['cache-misses']
 
-    print("Choice:    Config:  Cache Misses")
+    # print("Choice:    Config:  Cache Misses")
     for config in sorted(cache_misses_in_config):
         # Assuming lower cache misses are better
         # print("{:6d}: {}: {}".format(config, thread_to_cpu_permutations[config], cache_misses_in_config[config]))
@@ -68,7 +68,7 @@ def find_best_cpu_configuration():
             best_metric = cache_misses_in_config[config]
             best_config = config
 
-    print(f"Best CPU configuration based on cache misses: config {best_config}:{thread_to_cpu_permutations[best_config]}, with {best_metric} cache misses")
+    # print(f"Best CPU configuration based on cache misses: config {best_config}:{thread_to_cpu_permutations[best_config]}, with {best_metric} cache misses")
     return best_config
 
 def find_best_cpu_configuration_ipc_mpr(param):
@@ -100,9 +100,9 @@ def find_best_cpu_configuration_ipc_mpr(param):
                     param_in_config[config] = min(param_in_config[config], config_metrics[param])
 
 
-    print("Choice:    Config:  {}".format(param))
+    # print("Choice:    Config:  {}".format(param))
     for config in sorted(param_in_config):
-        print("{:6d}: {}: {}".format(config, thread_to_cpu_permutations[config], param_in_config[config]))
+        # print("{:6d}: {}: {}".format(config, thread_to_cpu_permutations[config], param_in_config[config]))
         if param == "ipc" and param_in_config[config] > best_metric:
             best_metric = param_in_config[config]
             best_config = config
@@ -110,7 +110,7 @@ def find_best_cpu_configuration_ipc_mpr(param):
             best_metric = param_in_config[config]
             best_config = config
 
-    print(f"Best CPU configuration based on {param}: config {best_config}:{thread_to_cpu_permutations[best_config]}, with {best_metric} {param}")
+    # print(f"Best CPU configuration based on {param}: config {best_config}:{thread_to_cpu_permutations[best_config]}, with {best_metric} {param}")
     return best_config
 
 def find_best_cpu_time():
@@ -140,7 +140,7 @@ def find_best_cpu_time():
             best_metric = time_taken_in_config[config]/3
             best_config = config
 
-    print(f"Best CPU configuration based on time taken: config {best_config}:{thread_to_cpu_permutations[best_config]}, with {best_metric} seconds")
+    # print(f"Best CPU configuration based on time taken: config {best_config}:{thread_to_cpu_permutations[best_config]}, with {best_metric} seconds")
     return best_config
 
 if __name__ == "__main__":
